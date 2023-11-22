@@ -1,11 +1,8 @@
     import javax.swing.*;
-    import javax.swing.text.View;
+
     import java.awt.*;
 import java.awt.event.*;
-    import javax.swing.*;
-    import javax.swing.text.View;
-    import java.awt.*;
-import java.awt.event.*;
+
 
 /** an instantiable class which defines the class object
  * it is the core of the programme
@@ -47,8 +44,6 @@ import java.awt.event.*;
 
     JMenuItem  MenuItem = new JMenuItem("");
 
-public boolean success;
-     public int attempts;
 
     /** constructor  with o argument
      *

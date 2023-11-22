@@ -13,8 +13,9 @@ AddTeacherView view;
     public AddTeacherController(){
 
      view = new AddTeacherView(this);
-allTeachers = AcademyFunctionality.open("teachers.data");
+     view.display();
 
+allTeachers = AcademyFunctionality.open("teachers.data");
 
 } // end constructor
 

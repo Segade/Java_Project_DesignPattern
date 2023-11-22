@@ -92,55 +92,20 @@ ControllerInterface controller;
         generateComboBoxes();
 
         // I set up the panel where the ComboBoxes will be
-        dobPanel.add(dayComboBox);
-        dobPanel.add(slashLabel1);
-        dobPanel.add(monthComboBox);
-        dobPanel.add(slashLabel2);
-        dobPanel.add(yearComboBox);
+        addDob();
 // I set up the panel where the RadioButtons for the gender will be
-        genderGroup.add(maleRadioButton);
-genderGroup.add(femaleRadioButton);
-        genderPanel.add(maleRadioButton);
-                genderPanel.add(femaleRadioButton);
-
+        addGender();
         // I add all the components to the main form
-                formPanel.add(nameLabel);
-        formPanel.add(nameTextField);
-        formPanel.add(surnameLabel);
-        formPanel.add(surnameTextField);
-        formPanel.add(addressLabel);
-        formPanel.add(addressTextField);
-        formPanel.add(townLabel);
-        formPanel.add(townTextField);
-        formPanel.add(countyLabel);
-        formPanel.add(countyTextField);
-        formPanel.add(dobLabel);
-        formPanel.add(dobPanel);
-        formPanel.add(genderLabel);
-        formPanel.add(genderPanel);
-        formPanel.add(departmentLabel);
-        formPanel.add(departmentTextField);
-        formPanel.add(phoneLabel);
-        formPanel.add(phoneTextField);
-        formPanel.add(emailLabel);
-        formPanel.add(emailTextField);
-
+addLabelsTextboxes();
 
 // I add the listener to the buttons
         addButton.addActionListener(this);
         cancelButton.addActionListener(this);
 
-
         // I set up the panel where the buttons will be
-        buttonsPanel.add(addButton, BorderLayout.EAST);
-        buttonsPanel.add(cancelButton, BorderLayout.WEST);
+addButtons();
 
-        // I add the panels to the main frame
-        addTeacherFrame.add(formPanel, BorderLayout.CENTER);
-        addTeacherFrame.add(buttonsPanel, BorderLayout.SOUTH);
-        formPanel.setVisible(true);
-        addTeacherFrame.setVisible(true);
-
+        display();
 
     } // end constructor
 
@@ -170,6 +135,56 @@ controller.save();
         } // end switch
 
     } //end actionperformed
+
+    private  void  addDob(){
+        dobPanel.add(dayComboBox);
+        dobPanel.add(slashLabel1);
+        dobPanel.add(monthComboBox);
+        dobPanel.add(slashLabel2);
+        dobPanel.add(yearComboBox);
+        } // end add dob
+
+    private  void  addGender(){
+        genderGroup.add(maleRadioButton);
+        genderGroup.add(femaleRadioButton);
+        genderPanel.add(maleRadioButton);
+        genderPanel.add(femaleRadioButton);
+
+    } // end add gender
+
+    private void addLabelsTextboxes(){
+        formPanel.add(nameLabel);
+        formPanel.add(nameTextField);
+        formPanel.add(surnameLabel);
+        formPanel.add(surnameTextField);
+        formPanel.add(addressLabel);
+        formPanel.add(addressTextField);
+        formPanel.add(townLabel);
+        formPanel.add(townTextField);
+        formPanel.add(countyLabel);
+        formPanel.add(countyTextField);
+        formPanel.add(dobLabel);
+        formPanel.add(dobPanel);
+        formPanel.add(genderLabel);
+        formPanel.add(genderPanel);
+        formPanel.add(departmentLabel);
+        formPanel.add(departmentTextField);
+        formPanel.add(phoneLabel);
+        formPanel.add(phoneTextField);
+        formPanel.add(emailLabel);
+        formPanel.add(emailTextField);
+
+    } // end add labels textboxes
+
+
+    private  void  addButtons(){
+        buttonsPanel.add(addButton, BorderLayout.EAST);
+        buttonsPanel.add(cancelButton, BorderLayout.WEST);
+
+        // I add the panels to the main frame
+        addTeacherFrame.add(formPanel, BorderLayout.CENTER);
+        addTeacherFrame.add(buttonsPanel, BorderLayout.SOUTH);
+    } // end add buttons
 
 
     /**
@@ -217,6 +232,12 @@ maleRadioButton.setSelected(false);
 femaleRadioButton.setSelected(false);
 nameTextField.requestFocus();
 }// end empty form
+
+public void  display(){
+    formPanel.setVisible(true);
+    addTeacherFrame.setVisible(true);
+
+} // end display
 
 
 
